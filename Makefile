@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	fdf
+NAME	=	fractol
 SRC		=	main.c line.c libmlx.c
 OBJ		=	$(SRC:.c=.o)
 HDR		=	libft/
@@ -26,7 +26,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@make -C libft/ fclean
 	@make -C libft/
-	@$(CC) -O3 $(FLAGS) $(MLX) -o $(NAME) $(OBJ) libft/libft.a
+	@$(CC) -O3 $(FLAGS) $(MLX) -o $(NAME) $(OBJ) libft/libft.a -g
 	@echo "Sucess: Program compiled." 
 
 clean:

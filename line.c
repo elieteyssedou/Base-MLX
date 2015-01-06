@@ -12,7 +12,7 @@
 
 #include "head.h"
 
-void	ft_line_put(t_all *all, t_pos p1, t_pos p2)
+void	ft_line_put(t_env *env, t_pos p1, t_pos p2)
 {
 	t_line		line;
 
@@ -23,9 +23,9 @@ void	ft_line_put(t_all *all, t_pos p1, t_pos p2)
 	line.p1 = p1;
 	line.p2 = p2;
 	if (line.dx > line.dy)
-		ft_line_put_1(line, all->img);
+		ft_line_put_1(line, env->img);
 	else
-		ft_line_put_2(line, all->img);
+		ft_line_put_2(line, env->img);
 }
 
 void	ft_line_put_1(t_line line, t_img img)
